@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Creode\LaravelFolderTaxonomy;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Creode\LaravelFolderTaxonomy\Commands\LaravelFolderTaxonomyCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LaravelFolderTaxonomyServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('laravel-folder-taxonomy')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_laravel-folder-taxonomy_table')
+            ->hasCommand(LaravelFolderTaxonomyCommand::class);
     }
 }
