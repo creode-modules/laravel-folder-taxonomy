@@ -2,9 +2,9 @@
 
 namespace Creode\LaravelFolderTaxonomy\Tests;
 
+use Creode\LaravelFolderTaxonomy\LaravelFolderTaxonomyServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Creode\LaravelFolderTaxonomy\LaravelFolderTaxonomyServiceProvider;
 
 class TestCase extends Orchestra
 {
