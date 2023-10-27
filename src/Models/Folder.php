@@ -2,8 +2,8 @@
 
 namespace Creode\LaravelFolderTaxonomy\Models;
 
-use Creode\LaravelTaxonomy\Models\Term;
 use Creode\LaravelTaxonomy\Concerns\Parentable;
+use Creode\LaravelTaxonomy\Models\Term;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class Folder extends Term

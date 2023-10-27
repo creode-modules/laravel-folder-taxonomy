@@ -2,7 +2,6 @@
 
 namespace Creode\LaravelFolderTaxonomy;
 
-use Creode\LaravelFolderTaxonomy\Commands\LaravelFolderTaxonomyCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
