@@ -2,15 +2,19 @@
 
 namespace Creode\LaravelFolderTaxonomy\Tests;
 
-use Creode\LaravelFolderTaxonomy\LaravelFolderTaxonomyServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Creode\LaravelFolderTaxonomy\LaravelFolderTaxonomyServiceProvider;
+use Creode\LaravelTaxonomy\LaravelTaxonomyServiceProvider;
 
 class TestCase extends Orchestra
 {
     protected function setUp(): void
     {
         parent::setUp();
+
+        $migration = include __DIR__.'/../database/migrations/create_folder_taxonomy_table.php.stub';
+        $migration->up();
 
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Creode\\LaravelFolderTaxonomy\\Database\\Factories\\'.class_basename($modelName).'Factory'
@@ -20,6 +24,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
+            LaravelTaxonomyServiceProvider::class,
             LaravelFolderTaxonomyServiceProvider::class,
         ];
     }
@@ -28,9 +33,6 @@ class TestCase extends Orchestra
     {
         config()->set('database.default', 'testing');
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-folder-taxonomy_table.php.stub';
-        $migration->up();
-        */
+        $app->register(LaravelTaxonomyServiceProvider::class);
     }
 }

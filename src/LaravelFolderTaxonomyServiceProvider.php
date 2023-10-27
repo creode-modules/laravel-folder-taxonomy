@@ -17,9 +17,7 @@ class LaravelFolderTaxonomyServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('laravel-folder-taxonomy')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_laravel-folder-taxonomy_table')
-            ->hasCommand(LaravelFolderTaxonomyCommand::class);
+            // ->hasConfigFile()
+            ->hasMigration('create_laravel-folder-taxonomy_table');
     }
 }
