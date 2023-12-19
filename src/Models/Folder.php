@@ -11,6 +11,13 @@ class Folder extends Term
     use Parentable;
 
     /**
+     * The table name for the model.
+     *
+     * @var string
+     */
+    protected $table_name = 'folders';
+
+    /**
      * Machine name of the specific term to use.
      *
      * @var string
