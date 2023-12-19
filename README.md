@@ -32,7 +32,7 @@ This is the contents of the published config file:
 
 ```php
 return [
-    'folder_model' => \Creode\LaravelFolderTaxonomy\Models\Folder::class,
+    'model' => \Creode\LaravelFolderTaxonomy\Models\Folder::class,
 ];
 ```
 
@@ -55,7 +55,7 @@ The folder model configuration can be overridden in the config file.
 
 ```php
 return [
-    'folder_model' => \App\Models\Folder::class,
+    'model' => \App\Models\Folder::class,
 ];
 ```
 
