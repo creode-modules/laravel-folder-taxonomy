@@ -1,6 +1,6 @@
 <?php
 
-namespace Creode\LaravelFolderTaxonomy;
+namespace Creode\LaravelFolderTaxonomy\Repositories;
 
 use Creode\LaravelRepository\BaseRepository;
 
