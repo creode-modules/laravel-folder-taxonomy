@@ -32,20 +32,31 @@ This is the contents of the published config file:
 
 ```php
 return [
+    'folder_model' => \Creode\LaravelFolderTaxonomy\Models\Folder::class,
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-folder-taxonomy-views"
 ```
 
 ## Usage
 
+The idea behind this module is to be able to publish the configuration and override the folder model with an extends class. This will allow you to add functionality onto the folder model.
+
 ```php
-$laravelFolderTaxonomy = new Creode\LaravelFolderTaxonomy();
-echo $laravelFolderTaxonomy->echoPhrase('Hello, Creode!');
+namespace App\Models;
+
+use Creode\LaravelFolderTaxonomy\Models\Folder as BaseFolder;
+
+class Folder extends BaseFolder
+{
+    // Add your custom functionality here
+}
+```
+
+The folder model configuration can be overridden in the config file.
+
+```php
+return [
+    'folder_model' => \App\Models\Folder::class,
+];
 ```
 
 ## Testing
