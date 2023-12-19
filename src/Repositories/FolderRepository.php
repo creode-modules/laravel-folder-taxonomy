@@ -11,6 +11,6 @@ class FolderRepository extends BaseRepository
      */
     protected function getModel(): string
     {
-        return config('folder-taxonomy.folder_model');
+        return config('folder-taxonomy.model');
     }
 }
