@@ -15,7 +15,7 @@ class Folder extends Term
      *
      * @var string
      */
-    protected $table_name = 'folders';
+    protected $table = 'folders';
 
     /**
      * Machine name of the specific term to use.
